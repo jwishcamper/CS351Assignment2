@@ -152,11 +152,11 @@ void loop() {
     }
   }
   else { //no buttons pressed, turn off LEDs and reset note bool
+    digitalWrite(A3,LOW);
+    digitalWrite(A2,LOW);
+    digitalWrite(A1,LOW);
+    digitalWrite(A0,LOW);
     if(!newNote){
-      digitalWrite(A3,LOW);
-      digitalWrite(A2,LOW);
-      digitalWrite(A1,LOW);
-      digitalWrite(A0,LOW);
       lcd.clear();
       lcd.print("Note:");
       newNote=true;
